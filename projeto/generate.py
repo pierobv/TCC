@@ -1,4 +1,3 @@
-import csv 
 
 offensive = "Macaco; seu macaco; seu preto; yasuo lixo toxico podre; comi sua mãe; \
     não foi o que sua mae disse ontem; primeiro macaco que vejo jogando lol; se mata; \
@@ -53,14 +52,19 @@ non_offensive = "wp time; boa; joga muito; nice; fez o basico; bom jogo;boa;jogo
 offensive = offensive.lower()
 non_offensive = non_offensive.lower()
 
-data_offensive = offensive.split(";")
+print(offensive[:50])
+print(non_offensive[:50])
+
+data_offensive = offensive.split(" ")
 data_non_offensive = non_offensive.split(";")
 
-print(len(data_offensive))
+print(data_offensive[:5])
+print(data_non_offensive[:5])
+
+print(len(data_offensive)/148)
 print(len(data_non_offensive))
 
-
-
+import csv
 with open('data.csv', 'w',  encoding='utf-8', newline='') as file:
     
     writer = csv.writer(file)
